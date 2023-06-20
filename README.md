@@ -31,6 +31,7 @@ print(s)
 # Save the output to an HTML file
 with open('colorize.html', 'w') as f:
     f.write(s)
+```bash
 
 ## Class and Methods
 TextColorizer
