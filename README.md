@@ -32,7 +32,7 @@ print(s)
 with open('colorize.html', 'w') as f:
     f.write(s)
 
-Class and Methods
+## Class and Methods
 TextColorizer
 The main class to colorize text based on the input data.
 
