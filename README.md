@@ -1,47 +1,68 @@
 # TextColorizer
 
-TextColorizer is a Python library used to visualize numerical data as color-coded text. It maps the data to a color gradient and applies this to the input text. The output is an HTML table with the color-coded text.
+Ever wanted to visualize your data in a more intuitive and fun way? Meet TextColorizer, a unique Python library that enables you to visualize numerical data as color-coded text. With TextColorizer, your data isn't just numbers in a table, but a vibrant display of color-mapped text.
 
-## Installation
+## Getting Started
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install TextColorizer.
-
-```bash
+Open your terminal and type:
 pip install TextColorizer
 
-## Usage
-# Import required libraries
+Usage
 import numpy as np
 from TextColorizer import TextColorizer
 
-# Initialize the input tokens and data
+# Start by initializing the input tokens and data
 tokens = ["The", " ", "quick", " ", "brown", " ", "fox", " ", "jumps", " ", "over", " ", "the", " ", "lazy", " ", "dog"]
 data_dict = {
-    'variance': list(np.random.rand(len(tokens))),
-    'diff_from_empty_str': list(np.random.rand(len(tokens)))
+    'var_1': list(np.random.rand(len(tokens))),
+    'var_2': list(np.random.rand(len(tokens)))
 }
 
-# Initialize the TextColorizer and generate colorized HTML
+# Create an instance of TextColorizer and generate the colorized HTML
 colorizer = TextColorizer(tokens, data_dict)
-s = colorizer.colorize()
+colorful_html = colorizer.colorize()
 
-# Print the HTML string
-print(s)
+# Print the colorized HTML string
+print(colorful_html)
 
-# Save the output to an HTML file
+# Want to use this HTML elsewhere? You can save the output to an HTML file
 with open('colorize.html', 'w') as f:
-    f.write(s)
-```bash
+    f.write(colorful_html)
 
-## Class and Methods
+## Breakdown of Classes and Methods
 TextColorizer
-The main class to colorize text based on the input data.
+At the heart of it all is our main class, TextColorizer, designed to take your text and data and turn it into a color-coded visualization.
 
 __init__(self, tokens, data_dict)
-Constructor to initialize the TextColorizer.
+The constructor of TextColorizer takes in your tokens (like words or punctuation) and a dictionary containing the corresponding data.
 
 normalize(self, values)
-Normalize a list of values to the range [0, 1].
+This function normalizes your data values to fit between 0 and 1.
 
 colorize(self)
-Generate colorized text as an HTML table based on the input data.
+The star of the show, this function generates colorized text as an HTML table based on your input data.
+
+Directory Structure
+To keep everything neat and tidy, we've organized the TextColorizer library as follows:
+
+markdown
+Copy code
+TextColorizer/
+│
+├── TextColorizer/
+│   ├── __init__.py
+│   └── text_colorizer.py
+│
+├── examples/
+│   ├── example1.py
+│   └── example2.py
+│
+├── tests/
+│   ├── test_text_colorizer.py
+│   └── __init__.py
+│
+├── README.md
+└── setup.py
+
+
+
