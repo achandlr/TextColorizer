@@ -7,7 +7,7 @@ Ever wanted to visualize your data in a more intuitive and fun way? Meet TextCol
 Open your terminal and type:
 pip install TextColorizer
 
-Usage
+# Usage
 import numpy as np
 from TextColorizer import TextColorizer
 
